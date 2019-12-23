@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>01000001 01101110 01100110 01100001 01101110 01100111</title>
+  </head>
+  <style media="screen">
+    html {
+      margin: 0;
+      background-color: rgb(136, 136, 136);
+    }
+    body {
+      margin: 0;
+    }
+    .top-bar {
+      margin: 0;
+      background-color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      color: #1d9529;
+    }
+    a {
+      text-decoration: none;
+      color: #000000;
+      font-family: Gill Sans Extrabold, sans-serif;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    #btn {
+      background-color: #ffffff;
+      border: 1px solid black;
+      padding: 14px 20px;
+      margin: 0px;
+    }
+    #inpt {
+      padding: 10px 16px;
+      font-size:20px;
+      border: 1px solid black;
+      margin: 0;
+    }
+  </style>
+  <body>
+    <div class="top-bar">
+      <a id="tipp" onclick="tipps()"><strong>Tipp</strong></a>
+    </div>
+    <center>
+      <h1>Rätsel Nummer 3 Der Chef</h1>
+      <a id="tipp1"></a>
+      <a id="tipp2"></a><br><br>
+      <h2 style="color: black">Wie heisst der Chef von Microsoft?</h2>
+      <h2 style="color: #000466">n d a y e l a l s a t a</h2>
+      <input id="inpt" type="text" name="Passwort" placeholder="Name?"></input>
+      <button id="btn" onclick="Lösung()">rvatnor -></button>
+    </center>
+  </body>
+  <script type="text/javascript">
+    var tipp = document.getElementById("tipp");
+    var tipp1 = document.getElementById("tipp1");
+    var tipp2 = document.getElementById("tipp2");
+    var inpt = document.getElementById("inpt");
+    var i = 0;
+
+    function tipps() {
+      if(i == 0) {
+        tipp1.innerHTML = "<strong>Tipp 1 [1/2]:  S. N.</strong>";
+        i = 1;
+      } else {
+        tipp2.innerHTML = "<strong><br> Tipp 2 [2/2]: Satya N.</strong>";
+      }
+    }
+
+    function Lösung() {
+      if(inpt.value == "Satya Nadella") {
+        inpt.value = "";
+        inpt.placeholder = "Richtig!";
+        window.setTimeout(function(){window.location = "cake.html";},1500)
+      } else {
+        inpt.value = "";
+        inpt.placeholder = "Leider Falsch!"
+        window.setTimeout(function(){inpt.placeholder = "Passwort?"},2100)
+      }
+    }
+  </script>
+</html>
