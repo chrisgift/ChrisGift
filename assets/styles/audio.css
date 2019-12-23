@@ -1,0 +1,56 @@
+.PlayerContainer {
+  display: inline-block;
+}
+
+#playbutton1 {
+  color: black;
+  font-size: 24px;
+  background-color: rgba(113, 113, 113, 1);
+  border-radius: 4000px;
+  display: inline-block;
+}
+
+input {
+  display: inline;
+}
+input[type=range]:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+#space {
+  display: inline;
+}
+
+#volume {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  color: black;
+  font-size: 23px;
+  display: inline-block;
+  border: 0;
+  background: transparent;
+}
+
+
+#TrackTime1 {
+  pointer-events: none;
+  outline: none;
+  -webkit-appearance: none;
+ bottom: 0;
+ left: 0;
+ height: 3px;
+ width: 100%;
+ z-index: 1;
+}
+
+progress::-webkit-progress-value {
+  transition: all 0.5s;
+  background-color: rgb(0, 240, 255);
+}
+
+progress::-moz-progress-value {
+  transition: all 0.5s;
+  background-color: rgb(0, 247, 255);
+}
